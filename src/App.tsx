@@ -39,8 +39,6 @@ function App() {
           </Route>
         </Route>
 
-        {/* <Route path="/register" element={<Register />} /> */}
-        <Route path="/login" element={<Login />} />
         <Route path="/start" element={<StartGuest />} />
         <Route element={<MainLayout />}>
           <Route path="/access-denied" element={<AccessDenied />} />
