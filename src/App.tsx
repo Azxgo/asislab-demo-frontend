@@ -1,6 +1,4 @@
 import './App.css'
-//import Register from './pages/auth/Register'
-import Login from './pages/auth/Login'
 import { lazy } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { MainLayout } from './layouts/MainLayout'
