@@ -4,8 +4,6 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function StartGuest() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
 

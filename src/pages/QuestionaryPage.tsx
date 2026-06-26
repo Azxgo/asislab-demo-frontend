@@ -16,7 +16,7 @@ export default function QuestionaryPage() {
     // Id del cuestionario
     const { id } = useParams<{ id: string }>()
     // Datos del usuario iniciado
-    const { user, isGuest } = useAuthContext()
+    const { user } = useAuthContext()
     // Preguntas
     const [questions, setQuestions] = useState<Pregunta[] | Modulo[]>([]);
     // Charla
