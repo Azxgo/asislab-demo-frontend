@@ -1,69 +1,41 @@
-# React + TypeScript + Vite
+# ASISLAB - DEMO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ASISLAB es una plataforma web para gestionar capacitaciones preventivas dentro de una empresa. Permite crear material de capacitación mediante IA, administrar trabajadores y analizar los resultados obtenidos a través de estadísticas.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://asislab-demo-frontend.vercel.app
 
-## Expanding the ESLint configuration
+> ⚠️ El backend utiliza un servicio gratuito. La primera carga puede tardar unos segundos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Características
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🤖 Generación automática de presentaciones mediante IA.
+- 📝 Creación automática de cuestionarios a partir de las diapositivas.
+- 👥 Gestión de trabajadores, áreas y cuestionarios.
+- 📊 Panel de estadísticas con métricas de desempeño.
+- 📈 Gráficos para visualizar resultados y progreso.
+- 🔐 Sistema de autenticación con roles (Administrador e Invitado).
+- 👤 Los invitados pueden acceder a funcionalidades limitadas.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tecnologías
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Frontend
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+- Chart.js
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
+*(No incluido en este repositorio)*
+- Python
+- Flask
+- MongoDB
+- OpenAI API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Aviso
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este repositorio se publica únicamente con fines de demostración y evaluación de habilidades.
+
+Todos los derechos sobre el código están reservados. No está permitida su copia, redistribución o reutilización sin autorización expresa del autor.

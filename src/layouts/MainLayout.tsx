@@ -1,9 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
-import { FaSignOutAlt, FaSignInAlt, FaUser } from "react-icons/fa";
+import { FaSignOutAlt, FaSignInAlt, FaUser, FaSun, FaMoon } from "react-icons/fa";
+import { useThemeContext } from "../context/ThemeContext";
 
 export function MainLayout() {
     const { user, isGuest, loading, quitGuest } = useAuthContext()
+    const { dark, setDark } = useThemeContext()
 
     return (
         <div className="bg-zinc-50 dark:bg-zinc-900 transition-colors">
@@ -12,16 +14,16 @@ export function MainLayout() {
                 border-b border-gray-200 dark:border-zinc-600">
                     <div className="flex items-center justify-between h-full gap-5">
                         <div>
-                                <Link
-                                    to={"/"}
-                                    className="flex items-center gap-2 font-semibold 
+                            <Link
+                                to={"/"}
+                                className="flex items-center gap-2 font-semibold 
                                     text-gray-700 hover:text-blue-600 dark:text-zinc-100
                                     transition-transform duration-200 ease-out hover:scale-105">
-                                    <img src="/logo.png"
-                                        className="object-cover w-12 h-12"
-                                        alt="logo.png" />
-                                    <h1 className="text-2xl font-bold">ASISLAB</h1>
-                                </Link>
+                                <img src="/logo.png"
+                                    className="object-cover w-12 h-12"
+                                    alt="logo.png" />
+                                <h1 className="text-2xl font-bold">ASISLAB</h1>
+                            </Link>
                         </div>
 
                         <div className="flex items-center gap-4">
@@ -74,9 +76,29 @@ export function MainLayout() {
                 </div>
             </main>
 
-            <footer className="flex items-center justify-center p-5 shadow-xs
+            <footer className="flex flex-col gap-3 items-center justify-center p-5 shadow-xs
             border-t border-gray-200 dark:border-zinc-600 text-gray-700 dark:text-zinc-300 transition-colors">
                 <p>© {new Date().getFullYear()} ASISLAB</p>
+                <div className="flex items-center">
+                    <div
+                        onClick={() => setDark(!dark)}
+                        className={`relative w-14 h-7 rounded-full transition-colors duration-300
+                                ${dark ? "bg-zinc-600" : "bg-gray-300"}`}
+                    >
+                        <span
+                            className={`absolute top-1 left-1 w-5 h-5 rounded-full bg-white shadow-lg
+                                        transition-transform duration-300
+                                        ${dark ? "translate-x-7" : "translate-x-0"}  `}
+                        ></span>
+                    </div>
+
+                    <div
+                        onClick={() => setDark(!dark)}
+                        className="px-4 py-2 rounded-lg "
+                    >
+                        {dark ? <FaSun /> : <FaMoon />}
+                    </div>
+                </div>
             </footer>
         </div>
     )
