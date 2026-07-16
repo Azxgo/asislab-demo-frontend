@@ -1,5 +1,9 @@
 # ASISLAB - DEMO
 
+---
+🇪🇸 Español | 🇺🇸 [English](README.en.md)
+---
+
 ASISLAB es una plataforma web para gestionar capacitaciones preventivas dentro de una empresa. Permite crear material de capacitación mediante IA, administrar trabajadores y analizar los resultados obtenidos a través de estadísticas.
 
 ## Demo

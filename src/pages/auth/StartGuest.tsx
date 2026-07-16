@@ -36,7 +36,10 @@ export default function StartGuest() {
     };
 
     return (
-        <div className="flex w-full justify-center bg-zinc-50 dark:bg-zinc-900 min-h-screen items-center">
+        <div className="flex flex-col w-full justify-center bg-zinc-50 dark:bg-zinc-900 min-h-screen items-center">
+            <div className="absolute top-15 dark:bg-zinc-800 border dark:border-zinc-600 rounded-lg p-2 dark:text-white ">
+                El backend utiliza un servicio gratuito. La primera carga puede tardar aproximadamente 30 segundos.
+            </div>
             <form
                 onSubmit={handleSubmit}
                 className="flex flex-col p-6 sm:p-8  rounded-lg gap-4 w-[82%] sm:w-full max-w-[400px] shadow-lg
